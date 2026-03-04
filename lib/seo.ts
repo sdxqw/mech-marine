@@ -13,18 +13,35 @@ function getSiteUrl() {
 }
 
 export const siteConfig = {
-  name: "Website Template",
-  shortName: "Template",
+  name: "MECH MARINE S.R.L.",
+  shortName: "Mech Marine",
   description:
-    "Next.js template with shadcn/ui, Docker, GitHub Actions, and production-ready defaults.",
-  keywords: ["nextjs", "shadcn", "docker", "github actions", "template"],
-  author: "Your Name",
+    "MECH MARINE S.R.L. – Eccellenza nella meccanica navale dal 2021. Specializzati in manutenzione motori, lavorazioni meccaniche di precisione e assistenza tecnica per aliscafi, catamarani e navi ad alta velocità. Sedi a Messina e Milazzo.",
+  keywords: [
+    "meccanica navale",
+    "manutenzione navale",
+    "manutenzione motori marini",
+    "lavorazioni meccaniche di precisione",
+    "assistenza aliscafi",
+    "assistenza catamarani",
+    "navi alta velocità",
+    "meccanica generale Messina",
+    "meccanica generale Milazzo",
+    "MECH MARINE",
+    "Liberty Lines assistenza",
+    "Navigazione Laghi manutenzione",
+    "riparazioni navali Sicilia",
+    "officina meccanica navale",
+    "ATECO 255300",
+    "meccanica marina Mediterraneo",
+  ],
+  author: "MECH MARINE S.R.L.",
 };
 
 export const siteMetadata: Metadata = {
   metadataBase: getSiteUrl(),
   title: {
-    default: siteConfig.name,
+    default: `${siteConfig.name} | Eccellenza nella Meccanica Navale`,
     template: `%s | ${siteConfig.name}`,
   },
   description: siteConfig.description,
@@ -34,15 +51,15 @@ export const siteMetadata: Metadata = {
   creator: siteConfig.author,
   openGraph: {
     type: "website",
-    locale: "en_US",
+    locale: "it_IT",
     url: "/",
-    title: siteConfig.name,
+    title: `${siteConfig.name} – Meccanica Navale di Precisione`,
     description: siteConfig.description,
     siteName: siteConfig.name,
   },
   twitter: {
     card: "summary_large_image",
-    title: siteConfig.name,
+    title: `${siteConfig.name} – Meccanica Navale`,
     description: siteConfig.description,
   },
   alternates: {
@@ -51,5 +68,19 @@ export const siteMetadata: Metadata = {
   robots: {
     index: true,
     follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  other: {
+    "geo.region": "IT-ME",
+    "geo.placename": "Messina",
+    "geo.position": "38.1938;15.5540",
+    "ICBM": "38.1938, 15.5540",
   },
 };
+

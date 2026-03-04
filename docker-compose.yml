@@ -8,7 +8,7 @@ services:
     container_name: ${APP_CONTAINER_NAME}
     restart: unless-stopped
     ports:
-      - "3000:3000"
+      - "3030:3000"
     networks:
       - nginx-proxy-manager_default
     environment:
