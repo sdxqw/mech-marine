@@ -50,7 +50,7 @@ export function SiteFooter() {
             <ul className="grid grid-cols-2 md:grid-cols-1 gap-2 md:gap-3 text-sm">
               <li>
                 <Link
-                  href="#about"
+                  href="/#about"
                   className="text-zinc-400 hover:text-primary transition-colors flex items-center gap-2 group"
                 >
                   <ArrowRight
@@ -62,7 +62,7 @@ export function SiteFooter() {
               </li>
               <li>
                 <Link
-                  href="#services"
+                  href="/servizi"
                   className="text-zinc-400 hover:text-primary transition-colors flex items-center gap-2 group"
                 >
                   <ArrowRight
@@ -74,7 +74,7 @@ export function SiteFooter() {
               </li>
               <li>
                 <Link
-                  href="#clients"
+                  href="/#clients"
                   className="text-zinc-400 hover:text-primary transition-colors flex items-center gap-2 group"
                 >
                   <ArrowRight
@@ -86,7 +86,7 @@ export function SiteFooter() {
               </li>
               <li>
                 <Link
-                  href="#contact"
+                  href="/contattaci"
                   className="text-zinc-400 hover:text-primary transition-colors flex items-center gap-2 group"
                 >
                   <ArrowRight

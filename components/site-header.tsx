@@ -6,10 +6,10 @@ import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 
 const navLinks = [
-  { href: "#about", label: "Chi Siamo" },
-  { href: "#services", label: "Servizi" },
-  { href: "#clients", label: "Clienti" },
-  { href: "#contact", label: "Contattaci" },
+  { href: "/#about", label: "Chi Siamo" },
+  { href: "/servizi", label: "Servizi" },
+  { href: "/#clients", label: "Clienti" },
+  { href: "/contattaci", label: "Contattaci" },
 ];
 
 export function SiteHeader() {
@@ -67,7 +67,7 @@ export function SiteHeader() {
             size="sm"
             className="bg-primary hover:bg-primary/90 rounded-full px-6"
           >
-            <Link href="#contact">Contattaci</Link>
+            <Link href="/contattaci">Contattaci</Link>
           </Button>
         </nav>
 
@@ -84,7 +84,7 @@ export function SiteHeader() {
       {/* Mobile Dropdown Menu */}
       <div
         className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out ${
-          isOpen ? "max-h-[400px] opacity-100" : "max-h-0 opacity-0"
+          isOpen ? "max-h-100 opacity-100" : "max-h-0 opacity-0"
         }`}
       >
         <nav className="bg-background/98 backdrop-blur-xl border-t border-border/40 px-4 pb-6 pt-4 space-y-1">
@@ -103,7 +103,7 @@ export function SiteHeader() {
               asChild
               className="w-full h-12 bg-primary hover:bg-primary/90 rounded-xl text-base font-semibold"
             >
-              <Link href="#contact" onClick={() => setIsOpen(false)}>
+              <Link href="/contattaci" onClick={() => setIsOpen(false)}>
                 Richiedi Preventivo
               </Link>
             </Button>
