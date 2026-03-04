@@ -9,19 +9,19 @@ export function HeroSection() {
     <section className="relative min-h-[80vh] md:min-h-[90vh] flex items-center justify-center overflow-hidden bg-background">
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-linear-to-br from-primary/10 via-background to-secondary/20 mix-blend-multiply" />
-        <div className="absolute inset-0 blur-[2px] bg-[radial-gradient(circle_at_20%_30%,hsl(var(--secondary-foreground)/0.11),transparent_44%),radial-gradient(circle_at_80%_20%,hsl(var(--secondary-foreground)/0.09),transparent_40%),radial-gradient(circle_at_50%_80%,hsl(var(--secondary)/0.30),transparent_50%)]" />
+        <div className="absolute inset-0 blur-[2px] bg-[radial-gradient(circle_at_20%_30%,hsl(var(--secondary-foreground)/0.025),transparent_50%),radial-gradient(circle_at_80%_20%,hsl(var(--secondary-foreground)/0.02),transparent_46%),radial-gradient(circle_at_50%_80%,hsl(var(--secondary)/0.09),transparent_56%)]" />
         <div className="absolute inset-x-0 bottom-0 h-40 bg-linear-to-t from-background to-transparent" />
         <div className="absolute inset-x-0 top-0 h-40 bg-linear-to-b from-background to-transparent" />
       </div>
 
       <div className="absolute inset-0 z-1 pointer-events-none">
-        <div className="absolute -left-14 md:-left-8 top-16 text-secondary-foreground/22 md:text-secondary-foreground/30 blur-[1px]">
+        <div className="absolute -left-14 md:-left-8 top-16 text-secondary-foreground/6 md:text-secondary-foreground/10 blur-[1px]">
           <Anchor size={260} strokeWidth={1} />
         </div>
-        <div className="absolute -right-12 md:right-12 top-24 text-secondary-foreground/20 md:text-secondary-foreground/28 rotate-6 blur-[1px]">
+        <div className="absolute -right-12 md:right-12 top-24 text-secondary-foreground/5 md:text-secondary-foreground/9 rotate-6 blur-[1px]">
           <Ship size={220} strokeWidth={1} />
         </div>
-        <div className="absolute left-1/2 -translate-x-1/2 bottom-14 text-secondary-foreground/24 md:text-secondary-foreground/32 blur-[1px]">
+        <div className="absolute left-1/2 -translate-x-1/2 bottom-14 text-secondary-foreground/7 md:text-secondary-foreground/11 blur-[1px]">
           <Waves size={260} strokeWidth={1} />
         </div>
       </div>
