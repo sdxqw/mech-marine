@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
@@ -39,46 +40,60 @@ export function SiteHeader() {
           : "bg-background/80 backdrop-blur-md border-b border-transparent"
       }`}
     >
-      <div className="container mx-auto flex h-16 max-w-7xl items-center justify-between px-4 md:px-8">
+      <div className="container relative mx-auto flex h-16 max-w-7xl items-center justify-between px-4 md:px-8">
         {/* Logo */}
         <Link
           href="/"
-          className="flex items-center gap-2 shrink-0"
+          className="flex items-center gap-2 shrink-0 z-10"
           onClick={() => setIsOpen(false)}
         >
-          <span className="font-black text-xl tracking-tight text-primary">
-            MECH MARINE
-          </span>
+          <div className="flex items-start">
+            <Image
+              src="/logo.png"
+              alt="Mech Marine Logo"
+              width={160}
+              height={40}
+              className="h-10 w-auto object-contain drop-shadow-sm"
+              priority
+            />
+            <span className="text-[10px] font-bold text-foreground opacity-70 ml-1 mt-0.5 leading-none">
+              &reg;
+            </span>
+          </div>
         </Link>
 
-        {/* Desktop Nav */}
-        <nav className="hidden md:flex items-center gap-8 text-sm font-medium">
+        {/* Desktop Nav - Centered Menu */}
+        <nav className="hidden md:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 items-center gap-1 bg-secondary/30 border border-border/50 backdrop-blur-md rounded-full px-1.5 py-1.5 shadow-xs">
           {navLinks.slice(0, 3).map((link) => (
             <Link
               key={link.href}
               href={link.href}
-              className="text-muted-foreground hover:text-primary transition-colors"
+              className="px-4 py-1.5 text-sm font-semibold text-muted-foreground hover:text-foreground hover:bg-background/80 hover:shadow-sm rounded-full transition-all duration-300"
             >
               {link.label}
             </Link>
           ))}
+        </nav>
+
+        {/* Actions */}
+        <div className="flex items-center gap-4 z-10">
           <Button
             asChild
             size="sm"
-            className="bg-primary hover:bg-primary/90 rounded-full px-6"
+            className="hidden md:inline-flex h-9 bg-primary hover:bg-primary/90 text-primary-foreground rounded-full px-6 font-semibold shadow-sm shadow-primary/20 transition-all hover:scale-105 active:scale-95"
           >
             <Link href="/contattaci">Contattaci</Link>
           </Button>
-        </nav>
 
-        {/* Mobile Hamburger */}
-        <button
-          onClick={() => setIsOpen(!isOpen)}
-          className="md:hidden p-2 rounded-lg hover:bg-secondary/50 transition-colors text-foreground"
-          aria-label={isOpen ? "Chiudi menu" : "Apri menu"}
-        >
-          {isOpen ? <X size={24} /> : <Menu size={24} />}
-        </button>
+          {/* Mobile Hamburger */}
+          <button
+            onClick={() => setIsOpen(!isOpen)}
+            className="md:hidden p-2 rounded-lg hover:bg-secondary/50 transition-colors text-foreground"
+            aria-label={isOpen ? "Chiudi menu" : "Apri menu"}
+          >
+            {isOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
+        </div>
       </div>
 
       {/* Mobile Dropdown Menu */}

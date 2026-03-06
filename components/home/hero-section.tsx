@@ -33,17 +33,6 @@ export function HeroSection() {
           variants={staggerContainer}
           className="space-y-6 md:space-y-10 flex flex-col items-center"
         >
-          <motion.div
-            variants={fadeInUp}
-            className="inline-flex items-center rounded-full border border-primary/20 bg-background/50 backdrop-blur-md px-4 py-1.5 text-sm font-medium text-primary shadow-sm"
-          >
-            <span className="relative flex h-2 w-2 mr-3">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
-            </span>
-            Eccellenza Navale dal 2021
-          </motion.div>
-
           <motion.h1
             variants={fadeInUp}
             className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-black tracking-tight text-foreground leading-[1.1]"
@@ -59,8 +48,8 @@ export function HeroSection() {
             className="text-base md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed font-medium px-2"
           >
             MECH MARINE S.R.L. offre servizi di meccanica generale e
-            manutenzione navale di altissima qualità, specializzati in
-            traghetti e mezzi ad alta velocità.
+            manutenzione navale di altissima qualità, specializzati in traghetti
+            e mezzi ad alta velocità.
           </motion.p>
 
           <motion.div
