@@ -27,6 +27,29 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen flex flex-col`}
       >
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "LocalBusiness",
+              name: siteMetadata.applicationName || "MECH MARINE S.R.L.",
+              description: siteMetadata.description,
+              url: "https://www.mech-marine.it", // Replace with realistic or actual URL if known
+              address: {
+                "@type": "PostalAddress",
+                addressLocality: "Messina",
+                addressRegion: "ME",
+                addressCountry: "IT",
+              },
+              geo: {
+                "@type": "GeoCoordinates",
+                latitude: 38.1938,
+                longitude: 15.554,
+              },
+            }),
+          }}
+        />
         <SiteHeader />
         <div className="flex-1 flex flex-col">{children}</div>
         <SiteFooter />

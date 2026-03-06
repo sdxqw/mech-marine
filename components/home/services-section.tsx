@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { ArrowRight, Settings, Ship, Wrench } from "lucide-react";
@@ -5,7 +7,10 @@ import { Button } from "@/components/ui/button";
 
 export function ServicesSection() {
   return (
-    <section id="services" className="py-16 md:py-32 bg-background relative z-10">
+    <section
+      id="services"
+      className="py-16 md:py-32 bg-background relative z-10"
+    >
       <div className="container mx-auto px-4 md:px-8 max-w-7xl">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-10 md:mb-16 gap-4 md:gap-6">
           <div className="max-w-2xl space-y-4">
@@ -47,9 +52,8 @@ export function ServicesSection() {
                 Meccanica Generale
               </h3>
               <p className="text-muted-foreground text-lg leading-relaxed max-w-md">
-                Lavorazioni meccaniche di precisione e riparazioni su
-                componenti essenziali per garantire l'affidabilità di ogni
-                viaggio.
+                Lavorazioni meccaniche di precisione e riparazioni su componenti
+                essenziali per garantire l'affidabilità di ogni viaggio.
               </p>
             </div>
           </motion.div>

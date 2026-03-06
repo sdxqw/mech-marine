@@ -1,3 +1,5 @@
+"use client";
+
 import { motion } from "framer-motion";
 import { Anchor, Ship } from "lucide-react";
 
@@ -40,9 +42,9 @@ export function ClientsSection() {
               <p className="text-muted-foreground leading-relaxed text-lg">
                 La più grande compagnia al mondo per il trasporto veloce
                 passeggeri. Forniamo assistenza continua e altamente
-                specializzata per la loro vasta flotta di aliscafi, catamarani
-                e mezzi ibridi di ultima generazione che collegano la Sicilia
-                alle isole minori.
+                specializzata per la loro vasta flotta di aliscafi, catamarani e
+                mezzi ibridi di ultima generazione che collegano la Sicilia alle
+                isole minori.
               </p>
             </div>
           </motion.div>
